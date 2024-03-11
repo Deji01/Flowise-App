@@ -8,8 +8,8 @@ const Chat = () => {
     const NEXT_PUBLIC_API_HOST = process.env.NEXT_PUBLIC_API_HOST;
 
     if (!NEXT_PUBLIC_CHATFLOW_ID || !NEXT_PUBLIC_API_HOST) {
-        (!NEXT_PUBLIC_CHATFLOW_ID) && console.error("Chatflow ID not defined.");
-        (!NEXT_PUBLIC_API_HOST) && console.error("API Host not defined.");
+        console.error("Chatflow ID or API Host not defined.");
+        return <div>Chat feature is currently unavailable.</div>;
     }
 
         return (
